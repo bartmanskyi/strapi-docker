@@ -14,19 +14,19 @@ services:
       DATABASE_PORT: 3306
       DATABASE_NAME: db_strapi
       DATABASE_USERNAME: my_user
-      DATABASE_PASSWORD: my_password
+      DATABASE_PASSWORD: my_password1337
       DATABASE_SSL: "false"
     ports: 
-      - 8080:1337
+      - 1337:1337
     volumes:
-      - C:/srv/strapi:/usr/src/api/strapi-app
+      - /home/kyle/Docker/strapi:/usr/src/api/strapi-app
 
   db:
     image: mariadb:latest
     container_name: strapi_db
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: my_root_password
+      MYSQL_ROOT_PASSWORD: my_root_password1337
       MYSQL_DATABASE: db_strapi
       MYSQL_USER: my_user
-      MYSQL_PASSWORD: my_password
+      MYSQL_PASSWORD: my_password1337
